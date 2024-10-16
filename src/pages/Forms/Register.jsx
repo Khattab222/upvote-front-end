@@ -40,8 +40,8 @@ const {newUser,loading} = useSelector((state) =>state.auth)
 
   }
   useEffect(() => {
-   if(newUser?.message == 'sign up success please confirm your account '){
-  toast.success(`success please check your email to confirm `);
+   if(newUser?.message == 'sign up success'){
+  toast.success(newUser?.message);
   navigate("/login");
   
    }
